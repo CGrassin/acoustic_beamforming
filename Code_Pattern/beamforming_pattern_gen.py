@@ -88,6 +88,9 @@ def plot_pattern(theta, mag, amp_law, phase_law, polar=False, output_file=None):
     """Plots a magnitude pattern, amplitude law and phase law.
     Optionnally, it can export the pattern to output_file. 
     """
+    # Default size & dpi
+    plt.figure(figsize=(10,4),dpi=100)
+    
     # Plot pattern
     if polar:
         ax = plt.subplot(131, polar=True)
@@ -118,11 +121,11 @@ def plot_pattern(theta, mag, amp_law, phase_law, polar=False, output_file=None):
     print(phase_law)
     
     # Show and save plot
-    plt.show();
     if output_file is not None:
         plt.savefig(output_file + '.png')
         np.savetxt(output_file + '.txt', np.transpose([theta,mag]),
                    delimiter='\t', header="Angle [deg]\tMagnitude [dB]")
+    plt.show();
 
 def main():
     # TODO allow arbitrary amp and phase laws as args
@@ -134,7 +137,7 @@ def main():
                         help="celerity of the wave in m/s (3.00E8 for light in vaccum, 340 for sound in air)")
     parser.add_argument("-d","--elements-spacing", type=float, default=0.15,
                         help="spacing between the elements in m")
-    parser.add_argument("-f","--frequency", type=float, default=1000,
+    parser.add_argument("-f","--frequency", type=float, default=750,
                         help="waveform frequency in Hz")
     parser.add_argument("-a","--steering-angle", type=float, default=0,
                         help="beam steering angle in deg")

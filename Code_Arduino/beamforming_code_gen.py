@@ -132,9 +132,9 @@ def main():
     print("* c = "+str(c)+" m/s");
     print("* d = "+str(d)+" m");
     print("* f = "+str(f)+" Hz");
-    # Fraunhofer distance for accoustic = D^2 / (4*lambda)
+    # Fraunhofer distance
     wavelength = c/f;
-    print("* far_field_d = "+str((d * len(pins))**2 / wavelength / 4)+" m */\n"); 
+    print("* far_field_d = "+str(2*(d * len(pins))**2 / wavelength )+" m */\n"); 
     # Includes/Defines
     print("#include \"A328_PINS.h\"");
     print("#include \"FM62429.h\"\n");
