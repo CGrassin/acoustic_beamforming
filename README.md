@@ -1,6 +1,6 @@
 # Acoustic Beamforming experiments
 
-This repository contains all the ressources for my acoustic beamforming experiment using Arduino. This original article is here: WORK IN PROGRESS
+This repository contains all the ressources for my acoustic beamforming experiment using Arduino. This original article is here: http://charleslabs.fr/en/project-Acoustic+beamsteering+with+a+speaker+array
 
 Various pieces of code/ressource are sorted by folder.
 
