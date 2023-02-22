@@ -94,7 +94,7 @@ def plot_pattern(theta, mag, amp_law, phase_law, polar=False, output_file=None):
     # Plot pattern
     if polar:
         ax = plt.subplot(131, polar=True)
-        ax.plot(math.radians(theta), mag)
+        ax.plot(np.radians(theta), mag)
         ax.set_theta_zero_location("N")
         ax.set_thetalim(-math.pi/2,math.pi/2)
     else:
